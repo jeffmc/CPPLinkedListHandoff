@@ -2,20 +2,24 @@
 // Jeff McMillan 1/6/23 C++
 #include "node.h"
 
-Node* Node::getNext() const { 
-	return nextptr;
+template <typename NT>
+void LinkedList<NT>::push() {
+
 }
 
-Student* Node::getStudent() {
-	return stuptr;
+template <typename NT>
+typename LinkedList<NT>::Node* LinkedList<NT>::getHead() {
+	return head;	
 }
 
-void Node::setNext(Node* np) {
-	nextptr = np;
+template <typename NT>
+LinkedList<NT>::LinkedList() {
+
 }
 
-Node::Node(Student* sp) : stuptr(sp) { }
+template <typename NT>
+LinkedList<NT>::~LinkedList() {
 
-Node::~Node() {
-	delete stuptr;
 }
+
+template class LinkedList<Student>;
